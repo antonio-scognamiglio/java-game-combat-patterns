@@ -47,6 +47,8 @@ Statistiche finali:
 # TASKS
 
 - 1 Creare la classe base "Weapon", da cui partiranno le altre classi specifiche (Wizard Staff, Arch, Sword,)
+- 1.1 Creare la classe concreta Sword, Wizard Staff e Arch, ogni classe concreta che estende una base ha senso nel momento in cui ha un attributo extra che normalmente non è presente in quella base tipo criticalChance per la spada, range per l'arco e manaCost per il bastone magico per esempio
+- 1.2 creare la classe Giocatore,
 - 2 Realizzare la factory che produce le armi, danno base, tipologia arma
 
 ---
@@ -59,3 +61,7 @@ Statistiche finali:
 # CHECKPOINT DI OGGI
 
 Completare i primi due task
+
+# IMPLEMENTAZIONI FUTURE
+
+Implementare un sistema di precisione dell'arma, in base alla distanza, l'attacco può fallire o meno e simili
