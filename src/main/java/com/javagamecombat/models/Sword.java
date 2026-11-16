@@ -1,10 +1,20 @@
 package com.javagamecombat.models;
 
 public class Sword extends Weapon {
-    // nelle implementazioni delle armi, ci dovrebbe essere qualcosa di diverso
-    // dalla classe base per giustificare
-    public Sword(double damage, String name) {
+    private double neededStamina;
+
+    public Sword(double damage, String name, double neededStamina) {
         super(damage, name);
+        this.neededStamina = neededStamina;
+    }
+
+    @Override
+    public void attack(Player player) {
+        if (player.consumeStamina(neededStamina)) {
+            System.out.println("Player attacked with " + getName() + " for " + getDamage() + " damage.");
+        } else {
+            System.out.println("Not enough stamina to attack.");
+        }
     }
 
 }

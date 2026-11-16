@@ -16,4 +16,6 @@ public abstract class Weapon {
     public String getName() {
         return name;
     }
+
+    public abstract void attack(Player player);
 }
