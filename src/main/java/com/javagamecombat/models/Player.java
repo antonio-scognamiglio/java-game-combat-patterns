@@ -23,4 +23,21 @@ public class Player {
         }
         return false;
     }
+
+    public boolean consumeMana(double amount){
+        //consumo mana solo se la quantità è disponibile
+        if(amount > 0 && mana >= amount){
+            mana -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean consumeArrows(){
+        if(arrows > 0){
+            arrows--;
+            return true;
+        }
+        return false;
+    }
 }
