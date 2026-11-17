@@ -10,8 +10,8 @@ public class PowerfulAttack implements AttackStrategy {
     }
 
     @Override
-    public double getCost() {
-        return 2.0;
+    public double getCost(Weapon weapon) {
+        return weapon.getWeaponCost() * 2.0;
     }
 
 }

@@ -10,7 +10,8 @@ public class FastAttack implements AttackStrategy {
     }
 
     @Override
-    public double getCost() {
-        return 0.5; // Costo basso perché l'attaco rapido
+    public double getCost(Weapon weapon) {
+        return weapon.getWeaponCost() * 0.5;
+        // 0.5; // Costo basso perché l'attaco rapido
     }
 }

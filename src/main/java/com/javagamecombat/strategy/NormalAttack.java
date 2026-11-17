@@ -10,8 +10,8 @@ public class NormalAttack implements AttackStrategy {
     }
 
     @Override
-    public double getCost() {
-        return 1.0;
+    public double getCost(Weapon weapon) {
+        return weapon.getWeaponCost() * 1.0;
     }
 
 }
