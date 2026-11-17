@@ -13,6 +13,11 @@ public class AttackContext {
         this.attackStrategy = strategy;
     }
 
+    public void setStrategy(AttackStrategy s) {
+        this.attackStrategy = s;
+    }
+
+    // La gestione dell'attacco deve essere spostata qui, e serve il Player in Input
     public double attack() {
         return attackStrategy.calculateDamage(weapon);
     }
