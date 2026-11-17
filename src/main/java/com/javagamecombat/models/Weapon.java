@@ -1,12 +1,16 @@
 package com.javagamecombat.models;
 
 public abstract class Weapon {
-    private double damage;
-    private String name;
+    private final double damage;
+    private final String name;
+    private final Resource resource;
+    private final double weaponCost;
 
-    public Weapon(double damage, String name) {
+    public Weapon(double damage, String name, Resource resource, double weaponCost) {
         this.damage = damage;
         this.name = name;
+        this.resource = resource;
+        this.weaponCost = weaponCost;
     }
 
     public double getDamage() {
@@ -17,5 +21,10 @@ public abstract class Weapon {
         return name;
     }
 
-    public abstract void attack(Player player);
+    public double getWeaponCost() {
+        return weaponCost;
+    }
+
+    protected abstract Resource getResource();
+
 }

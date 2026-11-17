@@ -1,20 +1,13 @@
 package com.javagamecombat.models;
 
-public class WizardStaff extends Weapon{
-    private double neededMana;
+public class WizardStaff extends Weapon {
 
-    public WizardStaff(double damage, String name, double neededMana){
-        super(damage, name);
-        this.neededMana = neededMana;
+    public WizardStaff(double damage, String name, double weaponCost, Resource resource) {
+        super(damage, name, resource, weaponCost);
     }
 
-    @Override 
-    public void attack(Player player){
-        if(player.consumeMana(neededMana)){
-            System.out.println("Player attacked with " +getName()
-            + " for " + getDamage() + " damage.");
-        }else{
-            System.out.println("Not enough mana to attack with " + getName());
-        }
+    @Override
+    protected Resource getResource() {
+        return Resource.MANA;
     }
 }
