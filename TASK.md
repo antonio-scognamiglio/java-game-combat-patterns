@@ -65,3 +65,8 @@ Completare i primi due task
 # IMPLEMENTAZIONI FUTURE
 
 Implementare un sistema di precisione dell'arma, in base alla distanza, l'attacco può fallire o meno e simili
+
+# OBIETTIVO MATTUTINO
+
+- Creazione Factory
+- Implementazione Strategy Pattern
